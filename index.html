@@ -6,13 +6,13 @@
         <link rel="icon" type="image/x-icon" href="res/favicon.ico" />
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="px-5 lg:px-0">
         <!-- Header -->
         <nav
-            class="mx-auto my-10 flex max-w-4xl items-center justify-between bg-black bg-opacity-5 rounded-md px-6"
+            class="mx-auto my-10 flex flex-wrap justify-center max-w-4xl sm:justify-between bg-black bg-opacity-5 rounded-md px-6"
             aria-label="Global"
         >
-            <div class="flex justify-between gap-4">
+            <div class="flex sm:justify-between sm:gap-4">
                 <div class="cursor-pointer bg-black bg-opacity-10 p-2">me</div>
                 <a href="projects.html">
                     <div
@@ -30,7 +30,7 @@
                 </a>
             </div>
 
-            <div class="flex justify-between gap-4">
+            <div class="flex sm:justify-between sm:gap-4">
                 <a href="https://twitter.com/_ibrahimkhawar" target="_blank">
                     <div
                         class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
@@ -59,7 +59,9 @@
         </nav>
 
         <!-- About me -->
-        <div class="mx-auto my-10 max-w-4xl grid grid-cols-3 gap-10">
+        <div
+            class="mx-auto my-10 max-w-4xl sm:grid grid-cols-3 gap-10 flex flex-col-reverse"
+        >
             <!-- Right Column -->
             <div class="col-span-2">
                 <div>
@@ -175,7 +177,10 @@
             <!-- Left Column -->
             <div class="col-span-1 flex flex-col float-right h-fit">
                 <div>
-                    <img src="res/IKB_SQUARE.jpeg" class="rounded-md" />
+                    <img
+                        src="res/IKB_SQUARE.jpeg"
+                        class="rounded-md w-72 mx-auto sm:w-full"
+                    />
                     <br />
                     <!-- <div class="flex flex-col gap-2">
                         <p class="text-xl font-medium">Highlights</p>
