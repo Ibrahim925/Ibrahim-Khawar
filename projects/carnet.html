@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ibrahim Khawar</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body class="px-5 lg:px-0">
+		<!-- Header -->
+		<nav
+			class="mx-auto my-10 flex flex-wrap justify-center max-w-4xl bg-black bg-opacity-5 rounded-md px-6"
+			aria-label="Global"
+		>
+			<div class="flex sm:justify-between sm:gap-4">
+				<a href="../index.html">
+					<div
+						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
+					>
+						ibrahim
+					</div>
+				</a>
+				<div class="cursor-pointer bg-black bg-opacity-10 p-2">
+					projects
+				</div>
+				<a href="https://twitter.com/_ibrahimkhawar" target="_blank">
+					<div
+						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
+					>
+						twitter
+					</div>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/ibrahim-khawar-24873a215"
+					target="_blank"
+				>
+					<div
+						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
+					>
+						linkedin
+					</div>
+				</a>
+				<a href="https://github.com/Ibrahim925" target="_blank">
+					<div
+						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
+					>
+						github
+					</div>
+				</a>
+			</div>
+		</nav>
+
+		<!-- Projects Grid -->
+		<div
+			class="mx-auto my-10 max-w-4xl sm:grid grid-cols-3 gap-10 flex flex-col-reverse"
+		>
+			<!-- Right Column -->
+			<div class="col-span-2">
+				<p class="text-3xl font-bold bg-blue-100 w-fit pr-2 rounded-md">
+					CarNet.
+				</p>
+
+				<p class="opacity-80">
+					The Future of Connected Autonomous Cars
+				</p>
+
+				<br />
+
+				<p>
+					Driving remains one of the most perilous activities, with
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>42,514 fatalities</span
+					>
+					reported in the US due to motor vehicle crashes in 2022.
+					This high risk stems from the fact that drivers, whether
+					human or automated, typically operate in isolation. They
+					rely solely on their own senses and reactions, leading to
+					delayed responses and increased accident rates.
+				</p>
+
+				<br />
+
+				<p>
+					Consider the challenge of navigating around a slow-moving
+					truck. Often, drivers must make split-second decisions
+					without knowing the exact intentions of other road users,
+					increasing the likelihood of collisions. Imagine if vehicles
+					could share their plans and intentions with each other in
+					real time. For instance, if a car planning to switch lanes
+					could inform nearby vehicles, accidents could be prevented
+					by allowing others to respond accordingly.
+				</p>
+
+				<br />
+
+				<p>
+					This is the core idea behind
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>CarNet</span
+					>, a project designed to enhance autonomous driving through
+					improved vehicle communication.
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>CarNet</span
+					>
+					aims to demonstrate how vehicles can publish their
+					lane-change intentions and respond to messages from nearby
+					devices.
+				</p>
+
+				<br />
+
+				<p>
+					The
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>CarNet system</span
+					>
+					utilizes a
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>Sphero RVR robot</span
+					>
+					equipped with a smartphone to capture live video and follow
+					a designated lane. The robot’s movement is guided by a
+					custom algorithm that calculates deviation from the lane and
+					adjusts its trajectory to stay on course.
+				</p>
+
+				<br />
+
+				<p>
+					When encountering an obstacle, such as a pair of scissors,
+					the robot broadcasts this event via a
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>bidirectional socket</span
+					>
+					to a laptop. The laptop then mimics the response of an
+					oncoming vehicle, either allowing the robot to navigate
+					around the obstacle or denying the maneuver if a collision
+					is predicted.
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>object detection</span
+					>
+					is powered by a pre-trained YOLO model, which accurately
+					classifies common objects to ensure reliable obstacle
+					recognition.
+				</p>
+
+				<br />
+
+				<p>
+					While the prototype uses
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>web sockets</span
+					>
+					for real-time communication, the long-term vision for
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>CarNet</span
+					>
+					includes implementing
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>Dedicated Short-Range Communication (DSRC)</span
+					>
+					combined with
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>GPS</span
+					>. This approach would allow vehicles to share critical
+					information only with nearby units, improving both safety
+					and traffic efficiency.
+				</p>
+
+				<br />
+
+				<p>
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>CarNet</span
+					>
+					represents a step toward a future where connected autonomous
+					vehicles enhance road safety and streamline traffic flow,
+					addressing the fundamental issue of
+					<span class="font-mono bg-blue-100 px-1 rounded-md"
+						>disconnected driving</span
+					>.
+				</p>
+			</div>
+			<!-- Left Column -->
+			<div>
+				<iframe
+					class="w-full"
+					src="https://www.youtube.com/embed/OQc2nDcDOro?si=LacMRDUP_dXRUgGH"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+				<div>
+					<blockquote class="twitter-tweet">
+						<p lang="en" dir="ltr">
+							Starting a new project to investigate
+							vehicle-to-vehicle communication with autonomous
+							driving. I’ll be posting updates over the next few
+							days on how it goes and what my goals are 🤙
+							<a href="https://t.co/F45xWAgDHf"
+								>pic.twitter.com/F45xWAgDHf</a
+							>
+						</p>
+						&mdash; Ibrahim Khawar (@_ibrahimkhawar)
+						<a
+							href="https://twitter.com/_ibrahimkhawar/status/1825040208565293137?ref_src=twsrc%5Etfw"
+							>August 18, 2024</a
+						>
+					</blockquote>
+					<script
+						async
+						src="https://platform.twitter.com/widgets.js"
+						charset="utf-8"
+					></script>
+				</div>
+			</div>
+		</div>
+
+		<footer
+			class="absolute bg-black bg-opacity-5 rounded-md px-6 left-0 right-0 flex justify-center py-4"
+		>
+			© Copyright 2024 Ibrahim Khawar
+		</footer>
+	</body>
+</html>
