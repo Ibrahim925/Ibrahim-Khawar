@@ -28,9 +28,12 @@
 						projects
 					</div>
 				</a>
-				<div class="cursor-pointer bg-black bg-opacity-10 p-2">
-					experience
-				</div>
+				<a href="../experience/index.html">
+					<div class="cursor-pointer bg-black bg-opacity-10 p-2">
+						experience
+					</div>
+				</a>
+
 				<a href="https://twitter.com/_ibrahimkhawar" target="_blank">
 					<div
 						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
@@ -58,142 +61,61 @@
 			</div>
 		</nav>
 
-		<!-- Projects Grid -->
 		<div
-			class="mx-auto my-10 max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+			class="mx-auto my-10 max-w-4xl sm:grid grid-cols-3 gap-10 flex flex-col-reverse"
 		>
-			<!-- Project Card -->
-			<a href="https://tablingos.com" target="_blank">
-				<div
-					class="relative group overflow-hidden rounded-lg shadow-xl shadow-blue-100 cursor-pointer transform transition duration-300 hover:scale-105 h-80"
-				>
-					<div
-						class="absolute bg-contain inset-10 bg-center bg-no-repeat"
-						style="background-image: url('../res/Tablingos.png')"
-					></div>
-					<div class="relative p-6 text-3xl font-bold z-10">
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Founder & CEO
-						</span>
-					</div>
-					<div
-						class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 opacity-0 transition duration-300 group-hover:opacity-100 z-20"
-					>
-						<p class="text-white text-center p-4">
-							A SaaS that enables users to define robust
-							<strong
-								>end-to-end data pipelines without code</strong
-							>, capable of validating, transforming, and
-							integrating data.
-						</p>
-					</div>
-				</div>
-			</a>
-			<a href="holland-bloorview.html">
-				<div
-					class="relative group overflow-hidden rounded-lg shadow-xl shadow-blue-100 cursor-pointer transform transition duration-300 hover:scale-105 h-80"
-				>
-					<div
-						class="absolute bg-contain bg-center inset-10 bg-no-repeat"
-						style="
-							background-image: url('../res/holland-bloorview-logo.jpg');
-						"
-					></div>
-					<div class="relative p-6 text-3xl font-bold z-10">
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Software Engineer
-						</span>
-					</div>
-					<div
-						class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 opacity-0 transition duration-300 group-hover:opacity-100 z-20"
-					>
-						<p class="text-white text-center p-4">
-							As a high school student, I assisted in research and
-							software engineering at
-							<strong
-								>Holland Bloorview Kids Rehabilitation
-								Hospital</strong
-							>.
+			<!-- Right Column -->
+			<div class="col-span-2">
+				<p class="text-3xl font-bold bg-blue-100 w-fit pr-2 rounded-md">
+					Nokia | CNS Security.
+				</p>
 
-							<br />
-							<br />
+				<p class="opacity-80">Software Engineer</p>
 
-							I worked with a team of PhD and Master's students in
-							the hospital's <strong>PROPEL Lab</strong> to
-							develop technologies that assists people with
-							physical disabilities.
-						</p>
-					</div>
-				</div>
-			</a>
-			<a href="nokia-future-tech.html">
-				<div
-					class="relative group overflow-hidden rounded-lg shadow-xl shadow-blue-100 cursor-pointer transform transition duration-300 hover:scale-105 h-80"
-				>
-					<div
-						class="absolute bg-contain bg-center inset-10 bg-no-repeat"
-						style="background-image: url('../res/nokia-logo.png')"
-					></div>
-					<div class="relative p-6 text-3xl font-bold z-10">
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Software Engineer
-						</span>
-					</div>
-					<div
-						class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 opacity-0 transition duration-300 group-hover:opacity-100 z-20"
-					>
-						<p class="text-white text-center p-4">
-							As a high school student, I interned at
-							<strong>Nokia</strong> as a software engineer.
+				<br />
 
-							<br />
-							<br />
+				<ul class="list-disc ml-5">
+					<li>
+						Developed a Python backend for Nokia’s Vulnerability
+						Assessment and Management System (VAMS) API, generating
+						detailed reports that summarize system vulnerabilities
+						and offer remediation suggestions. This system enhanced
+						customers' ability to quickly address platform
+						vulnerabilities and validate network security.
+					</li>
 
-							I worked on their CNS Security team, working
-							specifically on
-							<strong
-								>API integration and stateful testing</strong
-							>
-							with Schemathesis and Hypothesis to ensure network
-							stability and security.
-						</p>
-					</div>
-				</div>
-			</a>
-			<a href="logisense.html">
-				<div
-					class="relative group overflow-hidden rounded-lg shadow-xl shadow-blue-100 cursor-pointer transform transition duration-300 hover:scale-105 h-80"
-				>
-					<div
-						class="absolute bg-contain bg-center inset-10 bg-no-repeat"
-						style="
-							background-image: url('../res/logisense-logo.png');
-						"
-					></div>
-					<div class="relative p-6 text-3xl font-bold z-10">
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Software Engineer
-						</span>
-					</div>
-					<div
-						class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 opacity-0 transition duration-300 group-hover:opacity-100 z-20"
-					>
-						<p class="text-white text-center p-4">
-							During my summer after freshman year in high school,
-							I interned at LogiSense as a software engineer.
+					<br />
 
-							<br />
-							<br />
+					<li>
+						Developed stateful tests with Schemathesis and
+						Hypothesis for Nokia's notifier platform, ensuring
+						network security and stability.
+					</li>
 
-							I worked closely with their professional services
-							team to create a
-							<strong>Terraform Provider</strong> in GoLang to
-							allow IoT customers to easily configure the
-							LogiSense platform with code.
-						</p>
-					</div>
-				</div>
-			</a>
+					<br />
+
+					<li>Presented projects at the end of the term.</li>
+				</ul>
+			</div>
+			<!-- Left Column -->
+			<div class="flex flex-col gap-3">
+				<img
+					src="../res/nokia-group.jpeg"
+					class="w-full rounded-xl shadow-xl shadow-blue-100"
+				/>
+				<img
+					src="../res/group2.jpeg"
+					class="w-full rounded-xl shadow-xl shadow-blue-100"
+				/>
+				<img
+					src="../res/presentation.jpeg"
+					class="w-full rounded-xl shadow-xl shadow-blue-100"
+				/>
+				<img
+					src="../res/view.png"
+					class="w-full rounded-xl shadow-xl shadow-blue-100"
+				/>
+			</div>
 		</div>
 
 		<footer
