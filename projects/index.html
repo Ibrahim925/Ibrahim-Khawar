@@ -7,10 +7,10 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-	<body class="px-5 lg:px-0">
+	<body class="relative px-5 lg:px-0 pb-10">
 		<!-- Header -->
 		<nav
-			class="mx-auto my-10 flex flex-wrap justify-center max-w-4xl bg-black bg-opacity-5 rounded-md px-6"
+			class="mx-auto my-10 flex flex-wrap justify-center max-w-4xl bg-zinc-100 rounded-md px-6"
 			aria-label="Global"
 		>
 			<div class="flex sm:justify-between sm:gap-4">
@@ -24,13 +24,7 @@
 				<div class="cursor-pointer bg-black bg-opacity-10 p-2">
 					projects
 				</div>
-				<a href="../experience/index.html">
-					<div
-						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
-					>
-						experience
-					</div>
-				</a>
+
 				<a href="https://twitter.com/_ibrahimkhawar" target="_blank">
 					<div
 						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
@@ -63,6 +57,32 @@
 			class="mx-auto my-10 max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
 		>
 			<!-- Project Card -->
+			<a href="https://tablingos.com" target="_blank">
+				<div
+					class="relative group overflow-hidden rounded-lg shadow-xl shadow-blue-100 cursor-pointer transform transition duration-300 hover:scale-105 h-80"
+				>
+					<div
+						class="absolute bg-contain inset-10 bg-center bg-no-repeat"
+						style="background-image: url('../res/Tablingos.png')"
+					></div>
+					<div class="relative p-6 text-3xl font-bold z-10">
+						<span class="font-mono bg-blue-100 px-1 rounded-md">
+							Founder & CEO
+						</span>
+					</div>
+					<div
+						class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+					>
+						<p class="text-white text-center p-4">
+							A SaaS that enables users to define robust
+							<strong
+								>end-to-end data pipelines without code</strong
+							>, capable of validating, transforming, and
+							integrating data.
+						</p>
+					</div>
+				</div>
+			</a>
 			<a href="carnet.html">
 				<div
 					class="relative group overflow-hidden rounded-lg shadow-xl shadow-blue-100 cursor-pointer transform transition duration-300 hover:scale-105 h-80"
@@ -137,7 +157,7 @@
 		</div>
 
 		<footer
-			class="absolute bg-black bg-opacity-5 rounded-md px-6 left-0 sm:bottom-0 right-0 flex justify-center py-4"
+			class="fixed bg-zinc-100 rounded-md px-6 bottom-0 left-0 right-0 flex justify-center py-4"
 		>
 			© Copyright 2024 Ibrahim Khawar
 		</footer>
