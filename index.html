@@ -2,238 +2,69 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Ibrahim Khawar</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles.css" />
 	</head>
-	<body class="relative px-5 lg:px-0 pb-10">
-		<!-- Header -->
-		<nav
-			class="mx-auto my-10 flex flex-wrap justify-center max-w-4xl bg-zinc-100 rounded-md px-6"
-			aria-label="Global"
-		>
-			<div class="flex sm:justify-between sm:gap-4">
-				<div class="cursor-pointer bg-black bg-opacity-10 p-2">
-					ibrahim
+	<body>
+		<div class="site-shell">
+			<aside class="sidebar">
+				<nav class="sidebar-group" aria-label="Primary">
+					<a class="sidebar-link active" href="index.html">Home</a>
+					<a class="sidebar-link" href="building/index.html">Builds</a>
+					<a class="sidebar-link" href="blog/index.html">Writings</a>
+					<a class="sidebar-link" href="Ibrahim-Khawar-CV.pdf" target="_blank" rel="noreferrer">Resume</a>
+				</nav>
+
+				<div class="sidebar-group" aria-label="Social">
+					<a class="sidebar-link" href="https://twitter.com/_ibrahimkhawar" target="_blank" rel="noreferrer">Twitter</a>
+					<a class="sidebar-link" href="https://www.linkedin.com/in/ibrahim-khawar-24873a215" target="_blank" rel="noreferrer">LinkedIn</a>
+					<a class="sidebar-link" href="https://github.com/Ibrahim925" target="_blank" rel="noreferrer">GitHub</a>
 				</div>
-				<a href="projects/index.html">
-					<div
-						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
-					>
-						projects
+			</aside>
+
+			<main class="content body-copy">
+				<h1 class="site-title">Ibrahim Khawar</h1>
+				<hr class="page-rule" />
+
+				<section class="intro-grid">
+					<div>
+						<p>Welcome to my crevice of the interwebs. I'm Ibrahim. Nice to meet you!</p>
+
+            <p>I like to optimize for excellence. To me, this means directing my habits, projects, standards, and environment toward becoming better each day. It means learning through failure to sharpen my ability, depth, and character so success becomes a byproduct rather than the goal.</p>
+
+            <p>In high school, I did a variety of things. When I was 14, I interned at <a class="accent-link" href="https://www.logisense.com/" target="_blank" rel="noreferrer">LogiSense</a> as a software engineer, where much of my work revolved around data onboarding. After this internship, I founded a tech startup called <a class="accent-link" href="blog/why-i-started-tablingos.html">Tablingos</a>. The core product was a SaaS through which businesses could easily create secure data pipelines for normalization and integration. I received funding from <span class="accent-text">Microsoft</span> to pursue this venture.</p>
+
+            <p>I then became increasingly interested in how technology could directly improve human lives. I worked in Dr. Jan Andrysek's <a class="accent-link" href="https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/propel-lab" target="_blank" rel="noreferrer">PROPEL Lab</a> as a software engineer and researcher. I developed an algorithm for an iOS app to enable accurate out-of-clinic gait monitoring and rehabilitation. Being a part of a team dedicated to empowering people with independence was a deeply transformative experience.</p>
+
+            <p>After spending time with mobility technology, I built an iOS app called <a class="accent-link" href="blog/pocket-prosthetic.html">Pocket Prosthetic</a> capable of scanning residual limbs with mobile LiDAR to ultimately produce molds for fitted prosthetics. I won Toronto's largest hackathon, Hack the 6ix, with this project.</p>
+
+            <p>I've also interned at <span class="accent-text">Nokia</span> as a software engineer on their security team. I am now a <a class="accent-link" href="https://schulichleaders.com/" target="_blank" rel="noreferrer">Schulich Scholar</a> studying <a class="accent-link" href="https://engsci.utoronto.ca/" target="_blank" rel="noreferrer">Engineering Science at the University of Toronto</a>.</p>
+
+            <p>Outside of this, I enjoy watching theatre, acting in theatre, photography, MMA, swimming, magic tricks, bodybuilding, and being happy.</p>
 					</div>
-				</a>
 
-				<a href="https://twitter.com/_ibrahimkhawar" target="_blank">
-					<div
-						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
-					>
-						twitter
-					</div>
-				</a>
-				<a
-					href="https://www.linkedin.com/in/ibrahim-khawar-24873a215"
-					target="_blank"
-				>
-					<div
-						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
-					>
-						linkedin
-					</div>
-				</a>
-				<a href="https://github.com/Ibrahim925" target="_blank">
-					<div
-						class="cursor-pointer hover:bg-black hover:bg-opacity-10 p-2"
-					>
-						github
-					</div>
-				</a>
-			</div>
-		</nav>
-
-		<!-- About me -->
-		<div
-			class="mx-auto my-10 max-w-4xl sm:grid grid-cols-3 gap-10 flex flex-col-reverse"
-		>
-			<!-- Right Column -->
-			<div class="col-span-2">
-				<div>
-					<p class="text-lg">Hey, I'm</p>
-					<p
-						class="text-3xl font-bold bg-blue-100 w-fit pr-2 rounded-md"
-					>
-						Ibrahim Khawar.
-					</p>
-					<p class="opacity-80">Nice to meet you!</p>
-					<br />
-					<p>
-						I'm a Schulich Scholar studying Engineering Science at the University of Toronto, 
-            born and raised in Toronto. I'm on a mission to
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							radically improve healthcare and transportation
-							across the globe.
-						</span>
-					</p>
-
-					<br />
-
-					<p>
-						I envision a world where
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							autonomous vehicles communicate seamlessly</span
-						>
-						with each other and their surroundings, eradicating
-						motor accidents, and where technology
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							empowers individuals with disabilities</span
-						>
-						to gain greater independence and control over their
-						lives.
-					</p>
-
-					<br />
-
-					<p>
-						When I was 14, I interned at LogiSense as a software
-						engineer to
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							expose myself to the IoT industry</span
-						>
-						as my first foray into the world of wearable technology and connected autonomous
-						cars.
-					</p>
-
-					<br />
-
-					<p>
-						After this internship, I realized that data is the
-						lifeblood of the technologies that would enable the
-						future I envisioned.
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							This led me to create a tech startup called
-							<a
-								class="text-blue-900 hover:underline"
-								href="https://www.tablingos.com"
-								target="_blank"
-								>Tablingos</a
-							>.</span
-						>
-						The core product is a SaaS through which businesses can
-						normalize and integrate their data, laying the
-						groundwork for future data-reliant technologies. The
-						company is now
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							backed by Microsoft.</span
-						>
-					</p>
-
-					<br />
-
-					<p>
-						I also interned as a software engineer at
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Nokia</span
-						>. I gained first-hand experience with developing
-						software to ensure network security and stability.
-                        <!-- This was invaluable as secure, uninterrupted communication is
-						essential for vehicle-to-vehicle (V2V) and
-						vehicle-to-everything (V2E) interactions. I was also
-						inspired by Nokia's
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							<a
-								class="text-blue-900 hover:underline"
-								href="https://www.nokia.com/about-us/newsroom/articles/5g-steering-the-future-of-connected-cars/"
-								target="_blank"
-								>use of 5G to implement connected cars</a
-							>.
-						</span> -->
-					</p>
-
-					<br />
-
-					<p>
-						After this, I developed CarNet: a system that enables
-						cars to broadcast their intended actions,
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							helping nearby vehicles respond proactively and
-							reduce the risk of accident,</span
-						>
-						using what I had learned about IoT and real-time
-						networks from my previous internships.
-					</p>
-
-					<br />
-
-					<p>
-						I then began work at
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Holland Bloorview Kids Rehabilitation Hospital</span
-						>
-						in Dr. Jan Andrysek's
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							<a
-								class="text-blue-900 hover:underline"
-								href="https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/propel-lab"
-								target="_blank"
-								>PROPEL Lab</a
-							>.</span
-						>
-						With a team of PhD and Master's students, I conducted
-						research, developed a patient-facing app, and worked on
-						data processing algorithms.
-					</p>
-
-					<br />
-
-					<p>
-						During this time, I also created an IOS app called
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Pocket Prosthetic.</span
-						>
-						The app uses an iPhone's LiDAR sensor to create 3D scans
-						of a patient's residual limb which they can then send to
-						their prosthetist. This allows anyone, anywhere to
-						create and access high-quality custom prosthetics. The
-						app was one of the winning projects at
-						<span class="font-mono bg-blue-100 px-1 rounded-md">
-							Hack the 6ix, Toronto's largest hackathon.
-						</span>
-					</p>
-
-					<br />
-
-					<p>
-						I'm more than excited for what's to come as I continue
-						building, failing, learning, and iterating my way toward
-						the future I envision.
-					</p>
-
-					<br />
-
-					<p>
-						Apart from that, I love learning languages (French and
-						Arabic at the moment), reading and writing stories,
-						poetry, photography, filmmaking, basketball, running,
-						and swimming.
-					</p>
-				</div>
-			</div>
-			<!-- Left Column -->
-			<div class="col-span-1 flex flex-col float-right h-fit">
-				<div>
 					<img
-						src="res/IKB_SQUARE.jpeg"
-						class="rounded-md w-72 mx-auto sm:w-full shadow-xl shadow-blue-100"
+						class="portrait"
+						src="res/ibrahim-portrait-square.jpeg"
+						alt="Ibrahim Khawar portrait"
 					/>
-				</div>
-			</div>
-		</div>
 
-		<footer
-			class="fixed bg-zinc-100 rounded-md px-6 bottom-0 left-0 right-0 flex justify-center py-4"
-		>
-			© Copyright 2024 Ibrahim Khawar
-		</footer>
+				</section>
+
+				<p>In the long run I want to:</p>
+				<ul class="dash-list">
+					<li>work on technology that empowers people to do good</li>
+					<li>build safe, interpretable AGI</li>
+					<li>understand how the universe works</li>
+					<li>maximize human healthspan</li>
+					<li>learn from and work with cool people who love life</li>
+					<li>act on Broadway</li>
+				</ul>
+
+				<p class="page-footer">2026 © Ibrahim Khawar</p>
+			</main>
+		</div>
 	</body>
 </html>
