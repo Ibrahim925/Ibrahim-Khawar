@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="62" viewBox="0 0 176 62" role="img" aria-labelledby="title desc">
+  <title id="title">Ibrahim Khawar website badge</title>
+  <desc id="desc">A black and white website badge with an IK monogram and Ibrahim Khawar wordmark in a matching monoline style.</desc>
+
+  <defs>
+    <g id="glyph-I">
+      <path d="M1 0H7M4 0V16M1 16H7" />
+    </g>
+    <g id="glyph-A">
+      <path d="M1 0V16M7 0V16M1 0H7M1 8H7" />
+    </g>
+    <g id="glyph-B">
+      <path d="M1 0V16M1 0H7M1 8H7M1 16H7M7 0V8M7 8V16" />
+    </g>
+    <g id="glyph-H">
+      <path d="M1 0V16M7 0V16M1 8H7" />
+    </g>
+    <g id="glyph-K">
+      <path d="M1 0V16M7 0L1 8L7 16" />
+    </g>
+    <g id="glyph-M">
+      <path d="M1 16V0M1 0L4 8L7 0M7 0V16" />
+    </g>
+    <g id="glyph-R">
+      <path d="M1 0V16M1 0H7M1 8H7M7 0V8M1 8L7 16" />
+    </g>
+    <g id="glyph-W">
+      <path d="M1 0L3 16L5 8L7 16L9 0" />
+    </g>
+  </defs>
+
+  <rect width="176" height="62" fill="#ffffff" />
+  <rect x="1.5" y="1.5" width="173" height="59" fill="none" stroke="#000000" stroke-width="3" />
+  <path d="M58 4V58" fill="none" stroke="#000000" stroke-width="2.4" />
+
+  <g fill="none" stroke="#000000" stroke-linecap="square" stroke-width="4.5">
+    <path d="M16 11H28M22 11V51M16 51H28" />
+    <path d="M40 11V51M50 11L40 29M40 33L50 51" />
+  </g>
+
+  <g fill="none" stroke="#000000" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2.6">
+    <use href="#glyph-I" xlink:href="#glyph-I" x="66" y="10" />
+    <use href="#glyph-B" xlink:href="#glyph-B" x="77" y="10" />
+    <use href="#glyph-R" xlink:href="#glyph-R" x="88" y="10" />
+    <use href="#glyph-A" xlink:href="#glyph-A" x="99" y="10" />
+    <use href="#glyph-H" xlink:href="#glyph-H" x="110" y="10" />
+    <use href="#glyph-I" xlink:href="#glyph-I" x="121" y="10" />
+    <use href="#glyph-M" xlink:href="#glyph-M" x="132" y="10" />
+
+    <use href="#glyph-K" xlink:href="#glyph-K" x="71" y="34" />
+    <use href="#glyph-H" xlink:href="#glyph-H" x="82" y="34" />
+    <use href="#glyph-A" xlink:href="#glyph-A" x="93" y="34" />
+    <use href="#glyph-W" xlink:href="#glyph-W" x="104" y="34" />
+    <use href="#glyph-A" xlink:href="#glyph-A" x="117" y="34" />
+    <use href="#glyph-R" xlink:href="#glyph-R" x="128" y="34" />
+  </g>
+</svg>
