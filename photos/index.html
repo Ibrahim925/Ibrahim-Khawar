@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Ibrahim Khawar | Photos</title>
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../styles.css" />
+	</head>
+	<body>
+		<div class="page body-copy">
+			<header class="masthead">
+				<p class="masthead-title"><a href="../index.html">Ibrahim Khawar</a></p>
+				<nav class="masthead-nav" aria-label="Primary">
+					<a href="../index.html">Home</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<a href="../building/index.html">Builds</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<a class="active" href="index.html">Photos</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<a href="../Ibrahim-Khawar-CV.pdf" target="_blank" rel="noreferrer">Resume</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<a href="https://twitter.com/_ibrahimkhawar" target="_blank" rel="noreferrer">Twitter</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<a href="https://www.linkedin.com/in/ibrahim-khawar-24873a215" target="_blank" rel="noreferrer">LinkedIn</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<a href="https://github.com/Ibrahim925" target="_blank" rel="noreferrer">GitHub</a>
+					<span class="nav-dot" aria-hidden="true">&middot;</span>
+					<span class="webring">
+						<a href="https://WebRing.skule.ca/#https://www.ibrahimkhawar.com?nav=prev" aria-label="Previous site in the SKULE WebRing">&lsaquo;</a>
+						<a href="https://WebRing.skule.ca/#https://www.ibrahimkhawar.com" target="_blank" rel="noreferrer" aria-label="SKULE WebRing">
+							<img src="../res/skule-webring-accent.svg" alt="" />
+						</a>
+						<a href="https://WebRing.skule.ca/#https://www.ibrahimkhawar.com?nav=next" aria-label="Next site in the SKULE WebRing">&rsaquo;</a>
+					</span>
+				</nav>
+			</header>
+
+			<main>
+				<h1 class="page-title">Photos</h1>
+				<p class="lead">
+					I am not a professional photographer. I just enjoy taking
+					pictures. Click any photo to see it up close.
+				</p>
+
+				<div class="photo-grid">
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0375.jpeg" alt="Snowy peaks reflected in a still mountain lake" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0018.jpeg" alt="Colourful facades along a busy Venetian waterfront" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0367.jpeg" alt="Cows grazing on a meadow beneath snow-capped mountains" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0095.jpeg" alt="Gondolas moored in a narrow Venetian canal" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0243.jpeg" alt="Hikers resting on a grassy ridge overlooking alpine peaks" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0128.jpeg" alt="A gondola gliding past weathered brick facades in Venice" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0363.jpeg" alt="A brown cow with a bell standing high above an alpine valley" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0034.jpeg" alt="An alpine chough perched on an outstretched hand" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0173.jpeg" alt="Succulents spilling over a wrought-iron balcony above an Italian flag" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/dsc_0013.jpeg" alt="Clouds drifting over a rocky glacier valley in the Alps" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/img_5595.jpeg" alt="A green valley dotted with chalets beneath the Alps" loading="lazy" />
+					</button>
+					<button type="button" aria-label="View photo larger">
+						<img src="../res/photos/img_2538.jpeg" alt="A cable-car tower silhouetted against a backlit mountain ridge" loading="lazy" />
+					</button>
+				</div>
+
+				<footer class="page-footer">
+					<span>2026 &copy; Ibrahim Khawar</span>
+					<span>Toronto, Canada</span>
+				</footer>
+			</main>
+		</div>
+
+		<dialog class="lightbox" id="lightbox" aria-label="Expanded photo">
+			<img id="lightbox-img" src="" alt="" />
+			<button type="button" class="lightbox-button lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+			<button type="button" class="lightbox-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo">&lsaquo;</button>
+			<button type="button" class="lightbox-button lightbox-next" id="lightbox-next" aria-label="Next photo">&rsaquo;</button>
+		</dialog>
+
+		<script>
+			(function () {
+				var dialog = document.getElementById("lightbox");
+				var expanded = document.getElementById("lightbox-img");
+				var cells = Array.prototype.slice.call(
+					document.querySelectorAll(".photo-grid button")
+				);
+				var current = 0;
+
+				function show(index) {
+					current = (index + cells.length) % cells.length;
+					var thumb = cells[current].querySelector("img");
+					expanded.src = thumb.src;
+					expanded.alt = thumb.alt;
+				}
+
+				cells.forEach(function (cell, index) {
+					cell.addEventListener("click", function () {
+						show(index);
+						dialog.showModal();
+					});
+				});
+
+				document.getElementById("lightbox-close").addEventListener("click", function () {
+					dialog.close();
+				});
+
+				document.getElementById("lightbox-prev").addEventListener("click", function () {
+					show(current - 1);
+				});
+
+				document.getElementById("lightbox-next").addEventListener("click", function () {
+					show(current + 1);
+				});
+
+				dialog.addEventListener("click", function (event) {
+					if (event.target === dialog) {
+						dialog.close();
+					}
+				});
+
+				document.addEventListener("keydown", function (event) {
+					if (!dialog.open) return;
+					if (event.key === "ArrowLeft") show(current - 1);
+					if (event.key === "ArrowRight") show(current + 1);
+				});
+			})();
+		</script>
+	</body>
+</html>
