@@ -62,9 +62,9 @@
 						<div class="potd">
 							<h2 class="section-label">Picture of the day</h2>
 							<figure class="snapshot">
-								<a href="photos/index.html">
+								<button type="button" class="potd-button" id="potd-button" aria-label="Expand picture of the day">
 									<img id="potd-img" src="res/photos/dsc_0375.jpeg" alt="Picture of the day from my photo album" />
-								</a>
+								</button>
 							</figure>
 							<p class="potd-note">From <a href="photos/index.html">my photo album</a>.</p>
 						</div>
@@ -90,6 +90,11 @@
 			</main>
 		</div>
 
+		<dialog class="lightbox" id="lightbox" aria-label="Expanded picture of the day">
+			<img id="lightbox-img" src="" alt="" />
+			<button type="button" class="lightbox-button lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+		</dialog>
+
 		<script>
 			(function () {
 				var photos = [
@@ -113,6 +118,31 @@
 					(now - new Date(now.getFullYear(), 0, 0)) / 86400000
 				);
 				image.src = "res/photos/" + photos[dayOfYear % photos.length];
+
+				// Click the picture of the day to expand it, uncropped, in a lightbox.
+				var dialog = document.getElementById("lightbox");
+				var button = document.getElementById("potd-button");
+				if (dialog && button && typeof dialog.showModal === "function") {
+					var expanded = document.getElementById("lightbox-img");
+
+					button.addEventListener("click", function () {
+						expanded.src = image.src;
+						expanded.alt = image.alt;
+						dialog.showModal();
+					});
+
+					document
+						.getElementById("lightbox-close")
+						.addEventListener("click", function () {
+							dialog.close();
+						});
+
+					dialog.addEventListener("click", function (event) {
+						if (event.target === dialog) {
+							dialog.close();
+						}
+					});
+				}
 			})();
 		</script>
 	</body>

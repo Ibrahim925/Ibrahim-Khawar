@@ -237,8 +237,27 @@ img {
 	display: block;
 }
 
+/* click-to-expand trigger for the picture of the day */
+.potd-button {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	cursor: zoom-in;
+}
+
+.potd-button:focus-visible {
+	outline: 2px solid var(--navy);
+	outline-offset: 3px;
+}
+
+/* show the whole photo, uncropped, at its natural proportions */
 .potd img {
-	aspect-ratio: 4 / 3;
+	aspect-ratio: auto;
+	object-fit: contain;
 }
 
 .potd-note {
