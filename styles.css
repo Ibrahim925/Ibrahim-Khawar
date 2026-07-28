@@ -131,10 +131,8 @@ img {
 /* hamburger — only ever shown at mobile widths (see media query below) */
 .nav-toggle {
 	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 10px;
+	align-items: center;
+	padding: 4px 6px;
 	border: 0;
 	background: none;
 	color: inherit;
@@ -613,23 +611,25 @@ img {
 }
 
 @media (max-width: 640px) {
-	.has-js .masthead {
-		position: relative;
-	}
-
 	.has-js .nav-toggle {
-		display: block;
+		display: inline-flex;
 	}
 
-	/* inline bar keeps only Home / Builds / Photos; the rest lives in the menu */
-	.has-js .masthead-nav > *:not(.nav-primary) {
+	/* inline row keeps only Home / Builds / Photos plus the hamburger */
+	.has-js .masthead-nav > *:not(.nav-primary):not(.nav-toggle) {
 		display: none;
 	}
 
 	.has-js .masthead-nav {
-		column-gap: 22px;
-		padding-right: 44px;
-		padding-left: 44px;
+		column-gap: 20px;
+	}
+
+	.has-js .nav-toggle-bars {
+		width: 20px;
+	}
+
+	.has-js .nav-toggle-bars span + span {
+		margin-top: 5px;
 	}
 
 	.has-js .nav-overlay {
@@ -707,7 +707,7 @@ img {
 	}
 
 	body.nav-open .nav-toggle-bars span:first-child {
-		transform: translateY(7.5px) rotate(45deg);
+		transform: translateY(6.5px) rotate(45deg);
 	}
 
 	body.nav-open .nav-toggle-bars span:nth-child(2) {
@@ -715,7 +715,7 @@ img {
 	}
 
 	body.nav-open .nav-toggle-bars span:last-child {
-		transform: translateY(-7.5px) rotate(-45deg);
+		transform: translateY(-6.5px) rotate(-45deg);
 	}
 }
 

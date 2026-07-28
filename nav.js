@@ -7,8 +7,7 @@
 
 	function init() {
 		var nav = document.querySelector(".masthead-nav");
-		var masthead = document.querySelector(".masthead");
-		if (!nav || !masthead) return;
+		if (!nav) return;
 
 		// The overlay is a clone of the masthead nav, stacked vertically and
 		// without the middot separators.
@@ -32,7 +31,8 @@
 		toggle.setAttribute("aria-controls", overlay.id);
 		toggle.innerHTML =
 			'<span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>';
-		masthead.appendChild(toggle);
+		// sits inline with the primary links, at the end of the nav row
+		nav.appendChild(toggle);
 
 		function setOpen(open) {
 			document.body.classList.toggle("nav-open", open);
