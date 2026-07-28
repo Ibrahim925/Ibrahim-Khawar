@@ -128,6 +128,40 @@ img {
 	height: 19px;
 }
 
+/* hamburger — only ever shown at mobile widths (see media query below) */
+.nav-toggle {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	border: 0;
+	background: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+	outline: 2px solid var(--navy);
+	outline-offset: 2px;
+}
+
+.nav-toggle-bars {
+	display: block;
+	width: 24px;
+}
+
+.nav-toggle-bars span {
+	display: block;
+	height: 1.5px;
+	background: currentColor;
+	transition: transform 180ms ease, opacity 140ms ease;
+}
+
+.nav-toggle-bars span + span {
+	margin-top: 6px;
+}
+
 /* ---------- shared type ---------- */
 
 .body-copy p,
@@ -571,6 +605,120 @@ img {
 	}
 }
 
+/* ---------- mobile nav ---------- */
+
+/* the full-screen menu only ever exists at mobile widths */
+.nav-overlay {
+	display: none;
+}
+
+@media (max-width: 640px) {
+	.has-js .masthead {
+		position: relative;
+	}
+
+	.has-js .nav-toggle {
+		display: block;
+	}
+
+	/* inline bar keeps only Home / Builds / Photos; the rest lives in the menu */
+	.has-js .masthead-nav > *:not(.nav-primary) {
+		display: none;
+	}
+
+	.has-js .masthead-nav {
+		column-gap: 22px;
+		padding-right: 44px;
+		padding-left: 44px;
+	}
+
+	.has-js .nav-overlay {
+		position: fixed;
+		inset: 0;
+		z-index: 50;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 72px 24px 40px;
+		overflow-y: auto;
+		background: var(--paper);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 180ms ease, visibility 180ms;
+	}
+
+	body.nav-open .nav-overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.has-js body.nav-open {
+		overflow: hidden;
+	}
+
+	.nav-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 26px;
+		border: 0;
+		padding: 0;
+		margin: 0;
+		font-size: 0.95rem;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+	}
+
+	.nav-menu a {
+		padding: 4px 8px;
+		text-decoration: none;
+	}
+
+	.nav-menu a.active {
+		color: var(--navy);
+		text-decoration: underline;
+		text-underline-offset: 0.4em;
+	}
+
+	.nav-menu .webring {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.nav-menu .webring a {
+		font-size: 1.35rem;
+		line-height: 1;
+		letter-spacing: 0;
+	}
+
+	.nav-menu .webring img {
+		display: block;
+		width: 22px;
+		height: 22px;
+	}
+
+	/* keep the close control above the open menu, morphed into an X */
+	body.nav-open .nav-toggle {
+		position: fixed;
+		top: 18px;
+		right: clamp(12px, 4vw, 28px);
+		z-index: 60;
+	}
+
+	body.nav-open .nav-toggle-bars span:first-child {
+		transform: translateY(7.5px) rotate(45deg);
+	}
+
+	body.nav-open .nav-toggle-bars span:nth-child(2) {
+		opacity: 0;
+	}
+
+	body.nav-open .nav-toggle-bars span:last-child {
+		transform: translateY(-7.5px) rotate(-45deg);
+	}
+}
+
 @media (max-width: 480px) {
 	.accordion-content {
 		padding-left: 0;
@@ -584,5 +732,10 @@ img {
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
+	}
+
+	.nav-overlay,
+	.nav-toggle-bars span {
+		transition: none;
 	}
 }
